@@ -1,0 +1,6 @@
+#Soal 5(update data)#
+
+#data tabel items
+MariaDB [myshop]> update items set price = 2500000 where name like 'sumsang%';
+Query OK, 1 row affected (0.059 sec)
+Rows matched: 1  Changed: 1  Warnings: 0

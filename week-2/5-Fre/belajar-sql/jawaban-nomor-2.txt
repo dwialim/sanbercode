@@ -1,0 +1,25 @@
+#Soal 2(membuat tabel)#
+
+#tabelUSER
+MariaDB [myshop]> create table users(
+    -> id int primary key auto_increment,
+    -> name varchar(255),
+    -> email varchar(255),
+    -> password varchar(255));
+
+#tabelCATEGORIES
+MariaDB [myshop]> create table categories(
+    -> id int primary key auto_increment,
+    -> name varchar(255));
+Query OK, 0 rows affected (0.248 sec)
+
+#tabelITEMS
+MariaDB [myshop]> create table items(
+    -> id int primary key auto_increment,
+    -> name varchar(255),
+    -> description varchar(255),
+    -> price int,
+    -> stock int,
+    -> category_id int,
+    -> foreign key(category_id) references categories(id));
+Query OK, 0 rows affected (0.264 sec)

@@ -1,0 +1,41 @@
+#Soal 4(mengambil data dari database)#
+
+#data users
+MariaDB [myshop]> select id,name,email from users;
++----+----------+--------------+
+| id | name     | email        |
++----+----------+--------------+
+|  1 | Jhon Doe | john@doe.com |
+|  2 | Jane Doe | jane@doe.com |
++----+----------+--------------+
+2 rows in set (0.001 sec)
+
+#data items 
+MariaDB [myshop]> select*from items where price > 1000000;
++----+-------------+-----------------------------------+---------+-------+-------------+
+| id | name        | description                       | price   | stock | category_id |
++----+-------------+-----------------------------------+---------+-------+-------------+
+|  1 | Sumsang b50 | hape keren dari merek sumsang     | 4000000 |   100 |           1 |
+|  3 | IMHO Watch  | jam tangan anak yang jujur banget | 2000000 |    10 |           1 |
++----+-------------+-----------------------------------+---------+-------+-------------+
+2 rows in set (0.001 sec)
+
+MariaDB [myshop]> select*from items where name like '%watch';
++----+------------+-----------------------------------+---------+-------+-------------+
+| id | name       | description                       | price   | stock | category_id |
++----+------------+-----------------------------------+---------+-------+-------------+
+|  3 | IMHO Watch | jam tangan anak yang jujur banget | 2000000 |    10 |           1 |
++----+------------+-----------------------------------+---------+-------+-------------+
+1 row in set (0.001 sec)
+
+#data items join kategori
+MariaDB [myshop]> select items.name,items.description,items.price,items.stock,items.category_id, categories.name from items left join categories on it
+ems.category_id = categories.id;
++-------------+-----------------------------------+---------+-------+-------------+--------+
+| name        | description                       | price   | stock | category_id | name   |
++-------------+-----------------------------------+---------+-------+-------------+--------+
+| Sumsang b50 | hape keren dari merek sumsang     | 4000000 |   100 |           1 | gadget |
+| Uniklooh    | baju keren dari brand ternama     |  500000 |    50 |           2 | cloth  |
+| IMHO Watch  | jam tangan anak yang jujur banget | 2000000 |    10 |           1 | gadget |
++-------------+-----------------------------------+---------+-------+-------------+--------+
+3 rows in set (0.001 sec)

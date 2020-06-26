@@ -1,0 +1,22 @@
+#Soal 3(insert data ke tabel)#
+
+#tabelUSER
+MariaDB [myshop]> insert into users(name,email,password)
+    -> values('Jhon Doe','john@doe.com','john123'),
+    -> ('Jane Doe','jane@doe.com','jenita123');
+Query OK, 2 rows affected (0.042 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+#tabelCATEGORIES
+MariaDB [myshop]> insert into categories(name)
+    -> values('gadget'),('cloth'),('men'),('women'),('branded');
+Query OK, 5 rows affected (0.054 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+#tabelITEMS
+MariaDB [myshop]> insert into items(name,description,price,stock,category_id)
+    -> values('Sumsang b50','hape keren dari merek sumsang',4000000,100,1),
+    -> ('Uniklooh','baju keren dari brand ternama',500000,50,2),
+    -> ('IMHO Watch','jam tangan anak yang jujur banget',2000000,10,1);
+Query OK, 3 rows affected (0.042 sec)
+Records: 3  Duplicates: 0  Warnings: 0
