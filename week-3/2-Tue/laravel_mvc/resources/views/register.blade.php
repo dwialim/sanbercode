@@ -7,7 +7,7 @@
 	<h1>Buat Account Baru!</h1>
 	<h3>Sign Up Form</h3>
 	<form action="{{url('welcome')}}" method="POST">
-		{{ csrf_field() }}
+		@csrf
 	  <label>First Name:</label>
 	  <input type="text" name="fname"><br><br>
 
