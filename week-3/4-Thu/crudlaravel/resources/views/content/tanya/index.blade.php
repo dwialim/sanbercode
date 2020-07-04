@@ -40,19 +40,13 @@
 								@csrf
 								@foreach($data as $p)
 								<div class="row">
-									<div class="col-sm-12">
-										<div class="form-group">
-											<label>Pertanyaan</label>
-											<input type="text" class="form-control" value="{{$p->isi}}" readonly="">
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-sm-12">
-										<!-- textarea -->
-										<div class="form-group">
-											<label>Jawab</label>
-											<textarea name="isi" class="form-control" rows="3" placeholder="Enter ..."></textarea>
+									<div class="col-md-12">
+										<div class="card">
+											<div class="card-body">
+												<h5 class="card-title mb-2"><b>{{ $p->judul }}</b></h5>
+												<p class="card-text">{{ $p->isi }}</p>
+												<a href="{{url('jawaban/'.$p->id)}}" class="card-link">Read more</a>
+											</div>
 										</div>
 									</div>
 								</div>
