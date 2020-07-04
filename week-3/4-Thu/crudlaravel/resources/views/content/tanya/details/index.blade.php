@@ -43,7 +43,7 @@
 									<div class="col-md-12">
 										<div class="card">
 											<div class="card-body">
-												<a href="{{url('pertanyaan/'.$p->id)}}"><h5 class="card-title mb-2"><b>{{ $p->judul }}</b></h5></a>
+												<h5 class="card-title mb-2"><b>{{ $p->judul }}</b></h5>
 												<p class="card-text">{{ $p->isi }}</p>
 												@foreach($p->jawaban as $isi_jawaban)
 													<p>{{ $isi_jawaban }}</p>

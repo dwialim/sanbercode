@@ -31,4 +31,10 @@ class PertanyaanController extends Controller
 		$simpan = Pertanyaan::save($req->all());
 		return redirect('/pertanyaan');
 	}
+
+	public function detail($id){
+		$data = Pertanyaan::get_id($id);
+		// dd($data);
+		return view('content.tanya.details.index',compact('data'));
+	}
 }
