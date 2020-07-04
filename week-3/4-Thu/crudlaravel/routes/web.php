@@ -18,7 +18,9 @@ Route::get('/','HomeController@index');
 Route::get('/pertanyaan	','PertanyaanController@index')->name('tanya');
 Route::get('/pertanyaan/create','PertanyaanController@create')->name('buat');
 Route::post('/pertanyaan','PertanyaanController@store')->name('masuk');
-Route::get('/pertanyaan/{id}', 'PertanyaanController@detail')->name('detail');
+Route::get('/pertanyaan/{id}', 'PertanyaanController@detail');
+Route::put('/pertanyaan/{id}/edit', 'PertanyaanController@update');
+Route::delete('/pertanyaan/{id}', 'PertanyaanController@delete');
 
 Route::get('/jawaban/{pertanyaan_id}','JawabanController@index');
 Route::post('/jawaban/{pertanyaan_id}','JawabanController@store');

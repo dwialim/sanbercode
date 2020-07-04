@@ -15,6 +15,10 @@ class Pertanyaan{
 		return $get;
 	}
 
+	public static function delete_data($id){
+		$hapus = DB::table('pertanyaan')->where('id','=',$id)->delete();
+	}
+
 	public static function save($data){
 		unset($data['_token']);
 		$data['created_at'] = time();

@@ -48,8 +48,9 @@
 												@foreach($p->jawaban as $isi_jawaban)
 													<p>{{ $isi_jawaban }}</p>
 												@endforeach
-
 												<a href="{{url('jawaban/'.$p->id)}}" class="card-link btn btn-primary">Jawab</a>
+												<a href="{{url('pertanyaan/'.$p->id.'/edit')}}" class="card-link btn btn-primary">Edit</a>
+												<a href="{{url('pertanyaan/'.$p->id)}}" class="card-link btn btn-primary">Hapus</a>
 											</div>
 										</div>
 									</div>

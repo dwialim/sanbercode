@@ -37,4 +37,13 @@ class PertanyaanController extends Controller
 		// dd($data);
 		return view('content.tanya.details.index',compact('data'));
 	}
+
+	public function update(){
+
+	}
+
+	public function delete($id){
+		$hapus = Pertanyaan::delete_data($id);
+		return redirect('/pertanyaan');
+	}
 }
