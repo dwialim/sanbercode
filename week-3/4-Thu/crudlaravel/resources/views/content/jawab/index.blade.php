@@ -46,7 +46,7 @@
 											<!-- textarea -->
 											<div class="form-group">
 												<label>Jawab</label>
-												<textarea name="isi" class="form-control" rows="3" placeholder="Enter ..."></textarea>
+												<textarea name="jawaban_isi" class="form-control" rows="3" placeholder="Enter ..."></textarea>
 											</div>
 										</div>
 									</div>

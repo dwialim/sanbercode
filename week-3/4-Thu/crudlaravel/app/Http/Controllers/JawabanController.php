@@ -14,9 +14,11 @@ class JawabanController extends Controller
     	return view('content.jawab.index',compact('data'));
     }
 
-    public function store(Request $req, $pertanyaan_id){
+    public function store(Request $request, $pertanyaan_id){
 		// dd($req->all(),$pertanyaan_id);die;
-		$simpan = Jawaban::save($req->all(),$pertanyaan_id);
+		// dd($request->all());die;
+		// $comment_at = time();
+		$simpan = Jawaban::save($request->all(),$pertanyaan_id);
     	return redirect('pertanyaan');
     }
 }

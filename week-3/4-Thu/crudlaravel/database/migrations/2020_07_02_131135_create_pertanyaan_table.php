@@ -17,7 +17,8 @@ class CreatePertanyaanTable extends Migration
             $table->id();
             $table->string('judul');
             $table->text('isi');
-            $table->timestamps();
+            $table->integer('created_at')->nullable();
+            $table->integer('updated_at')->nullable();
         });
     }
 

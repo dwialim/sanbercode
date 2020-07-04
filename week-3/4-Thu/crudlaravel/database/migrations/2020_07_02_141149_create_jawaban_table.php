@@ -15,10 +15,14 @@ class CreateJawabanTable extends Migration
     {
         Schema::create('jawaban', function (Blueprint $table) {
             $table->id();
-            $table->text('isi');
+            $table->text('jawaban_isi');
             $table->unsignedBigInteger('pertanyaan_id');
-            $table->foreign('pertanyaan_id')->references('id')->on('pertanyaan');
-            $table->timestamps();
+            $table->foreign('pertanyaan_id')
+                ->references('id')
+                ->on('pertanyaan')
+                ->onDelete('cascade');
+            $table->integer('created_at')->nullable();
+            $table->integer('updated_at')->nullable();
         });
     }
 

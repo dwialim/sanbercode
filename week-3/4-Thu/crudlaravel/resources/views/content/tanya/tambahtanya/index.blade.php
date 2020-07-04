@@ -52,7 +52,7 @@
 								<div class="row">
 									<button type="submit" class="btn btn-success">Submit</button>
 									&nbsp;&nbsp;&nbsp;
-									<a href="{{route('tanya')}}" class="btn btn-danger">Kembali</a>
+									<a href="{{url('pertanyaan')}}" class="btn btn-danger">Kembali</a>
 								</div>
 							</div>
 						</form>

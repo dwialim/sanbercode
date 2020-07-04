@@ -45,6 +45,10 @@
 											<div class="card-body">
 												<h5 class="card-title mb-2"><b>{{ $p->judul }}</b></h5>
 												<p class="card-text">{{ $p->isi }}</p>
+												@foreach($p->jawaban as $isi_jawaban)
+													<p>{{ $isi_jawaban }}</p>
+												@endforeach
+
 												<a href="{{url('jawaban/'.$p->id)}}" class="card-link">Read more</a>
 											</div>
 										</div>

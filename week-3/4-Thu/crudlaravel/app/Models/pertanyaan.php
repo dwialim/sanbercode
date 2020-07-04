@@ -7,14 +7,15 @@ use App\Models\jawaban;
 
 class Pertanyaan{
 	public static function get_all(){
-		$get = Jawaban::with('pertanyaan')->where('pertanyaan_id','id');
+		$get = DB::table('pertanyaan')
+			->get();
 		return $get;
 	}
 
 	public static function save($data){
 		unset($data['_token']);
-		$data['created_at'] = \Carbon\Carbon::now();
-		$data['updated_at'] = \Carbon\Carbon::now();
+		$data['created_at'] = time();
+		// $data['updated_at'] = time();
 		$simpan = DB::table('pertanyaan')->insert($data);
 		return $simpan;
 	}
