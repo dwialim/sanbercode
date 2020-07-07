@@ -22,7 +22,6 @@ class Pertanyaan{
 	public static function save($data){
 		unset($data['_token']);
 		$data['created_at'] = time();
-		// $data['updated_at'] = time();
 		$simpan = DB::table('pertanyaan')->insert($data);
 		return $simpan;
 	}
@@ -35,7 +34,7 @@ class Pertanyaan{
 	public static function update($req,$id){
 		unset($req['_token']);
 		unset($req['_method']);
-		// $req['id'] = $id;
+		$req['updated_at'] = time();
 		$update = DB::table('pertanyaan')->where('id',$id)->update($req);
 		return $update;
 	}

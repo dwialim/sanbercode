@@ -25,8 +25,6 @@ class Jawaban{
         unset($data['_token']);
         $data['pertanyaan_id'] = $id;
         $data['created_at'] = time();
-        // $data['updated_at'] = \Carbon\Carbon::now();
-        // print_r($data);die();
         $simpan = DB::table('jawaban')->insert($data);
         return $simpan;
     }

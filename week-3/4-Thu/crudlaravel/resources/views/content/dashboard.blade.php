@@ -6,13 +6,13 @@
 		<div class="container-fluid">
 			<div class="row mb-2">
 				<div class="col-sm-6">
-					<h1 class="m-0 text-dark">Forum Tanya</h1>
+					<h1 class="m-0 text-dark">Table Pertanyaan</h1>
 				</div><!-- /.col -->
 
 				<div class="col-sm-6">
 					<ol class="breadcrumb float-sm-right">
 						<li class="breadcrumb-item"><a href="#">Home</a></li>
-						<li class="breadcrumb-item active">Form Tanya</li>
+						<li class="breadcrumb-item active">Table Pertanyaan</li>
 					</ol>
 				</div>
 			</div>
@@ -26,11 +26,8 @@
 					<div class="card">
 						<div class="card-header">
 							<div class="row">
-								<div class="col-md-6">
-									<h3 class="card-title mt-2">DataTable with default features</h3>
-								</div>
-								<div class="col-md-6">
-									<a style="float: right;" href="{{route('buat')}}" class="btn btn-primary">Bertanya</a>
+								<div class="col-md-12">
+									<h3 class="card-title mt-2">Data Pertanyaan</h3>
 								</div>
 							</div>
 						</div>
@@ -49,15 +46,8 @@
 										<td>{{$p->judul}}</td>
 										<td>{{$p->isi}}</td>
 									</tr>
-									
 								</tbody>
 								@endforeach
-								<tfoot>
-									<tr>
-										<th>Rendering engine</th>
-										<th>Browser</th>
-									</tr>
-								</tfoot>
 							</table>
 						</div>
 						<!-- /.card-body -->
