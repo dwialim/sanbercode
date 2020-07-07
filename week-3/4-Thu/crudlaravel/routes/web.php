@@ -19,5 +19,10 @@ Route::get('/pertanyaan	','PertanyaanController@index')->name('tanya');
 Route::get('/pertanyaan/create','PertanyaanController@create')->name('buat');
 Route::post('/pertanyaan','PertanyaanController@store')->name('masuk');
 
-Route::get('/jawaban/{pertanyaan_id}','JawabanController@index');
-Route::post('/jawaban/{pertanyaan_id}','JawabanController@store');
+Route::get('/pertanyaan/detail/{pertanyaan_id}', 'PertanyaanController@detail');
+Route::delete('/pertanyaan/detail/{pertanyaan_id}', 'PertanyaanController@destroy');
+Route::get('/pertanyaan/detail/{pertanyaan_id}/edit', 'PertanyaanController@edit');
+Route::put('/pertanyaan/detail/{pertanyaan_id}/edit', 'PertanyaanController@update')->name('update');
+
+Route::get('/pertanyaan/detail/{pertanyaan_id}/jawaban','JawabanController@index');
+Route::post('/pertanyaan/detail/{pertanyaan_id}/jawaban','JawabanController@store');

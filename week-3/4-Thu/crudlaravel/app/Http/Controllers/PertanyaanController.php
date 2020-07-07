@@ -31,4 +31,27 @@ class PertanyaanController extends Controller
 		$simpan = Pertanyaan::save($req->all());
 		return redirect('/pertanyaan');
 	}
+
+	public function edit($id){
+		$data = Pertanyaan::edit($id);
+		return view('content.tanya.edit.index',compact('data'));
+	}
+
+	public function update(Request $req, $id){
+		// dd($req->all(),$id);die();
+		$update = Pertanyaan::update($req->all(),$id);
+		return redirect('pertanyaan/detail/'.$id);
+	}
+
+	public function destroy($id){
+		$destroy = Pertanyaan::destroy($id);
+		return redirect('pertanyaan');
+	}
+
+	public function detail($id){
+		$detail = Pertanyaan::detail($id);
+		$join = Pertanyaan::join($id);
+		
+		return view('content.tanya.detail.index',compact('join','detail'));
+	}
 }

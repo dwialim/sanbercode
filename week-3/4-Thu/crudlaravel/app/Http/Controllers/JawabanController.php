@@ -15,10 +15,7 @@ class JawabanController extends Controller
     }
 
     public function store(Request $request, $pertanyaan_id){
-		// dd($req->all(),$pertanyaan_id);die;
-		// dd($request->all());die;
-		// $comment_at = time();
 		$simpan = Jawaban::save($request->all(),$pertanyaan_id);
-    	return redirect('pertanyaan');
+    	return redirect('pertanyaan/detail/'.$pertanyaan_id);
     }
 }
